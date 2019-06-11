@@ -1,0 +1,131 @@
+<% include partials/header %>
+
+<section class="hero">
+	<div class="hero-content-area">
+		<h1>Hey there!</h1>
+		<h3>My name is <span>Jordan</span>. I'm a <span>web developer</span>.</h3>
+		<hr>
+		<p>
+		    I'm a <span>full-stack developer</span> with a focus on Node.js, Express, and Mongoose.
+		</p>
+		<p>
+		    I can take your <span>concept</span> and turn it into a <span>fully functional</span> and <span>feature complete</span> website.
+		</p>
+		<p id="padding">
+		    I'm currently looking for <span>freelancing</span> work.
+		</p>
+		<div class="scroll-down">
+            <div class="mouse">
+                <div class="scroller"></div>
+            </div>
+        </div>
+	</div>
+</section>
+
+<section class="tech">
+    <div class="expertise">
+        <h3 class="title knowledgeTitle">Technical Expertise</h3>
+        <hr id="expertisehr">
+        <div class="knowledge">
+            <div><img src="./expertise/HTML5.png" width="60" height="60"><p>HTML 5</p></div>
+            <div><img src="./expertise/CSS3.png" width="60" height="60"><p>CSS 3</p></div>
+            <div><img src="./expertise/Javascript.png" width="60" height="60"><p>Javascript</p></div>
+            <div><img src="./expertise/React.png" width="58" height="52"><p>React</p></div>
+            <div><img src="./expertise/Bootstrap.png" width="60" height="60"><p>Bootstrap</p></div>
+            <div><img src="./expertise/Git.png" width="60" height="60"><p>Git</p></div>
+            <div><img src="./expertise/Heroku.png" width="60" height="60"><p>Heroku</p></div>
+            <div><img src="./expertise/Nodejs.png" width="100" height="61"><p></p></div>
+            <div><img src="./expertise/Express.png" width="120" height="31"><p></p></div>
+            <div><img src="./expertise/Mongodb.png" width="130" height="36"><p></p></div>
+        </div>
+    </div>
+    
+    <div id="projects" class="projects">
+    	<h3 class="title examplesTitle">Projects</h3>
+    	<hr id="projectshr">
+        <div class="examples">
+            <div class="text-center">
+                <div class="box">
+                    <img src="./projects/Warbler.png" class="rounded" alt="Warbler">
+                    <h3>
+                        Warbler
+                        <a href="https://warbler-client-jp.herokuapp.com" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a>
+                        <a href="https://github.com/JPisani4/warbler-server" target="_blank"><i class="fab fa-github fa-xs"></i></a>
+                    </h3>
+                    <hr id="warblerhr">
+    		        <div>Warbler is a Twitter clone with a fresh paint job developed for practice with React.</div>
+    		        <div id="tech">It was developed with Node.js, Mongoose, and React.</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="box">
+                    <img src="./projects/Paypixs.png" class="rounded" alt="Paypixs">
+                    <h3>
+                        Paypixs
+                        <a href="https://www.paypixs.com" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a>
+                    </h3>
+                    <hr id="paypixshr">
+    		        <div>Paypixs is a service that offers payment in return for pictures of requested properties.</div>
+    		        <div id="tech">It was developed with Node.js, Mongoose, and Express.</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="box">
+                    <img src="./projects/TodoApp.png" class="rounded" alt="Todo List">
+                    <h3>
+                        Todo List
+                        <a href="https://todo-server-jp.herokuapp.com" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a>
+                        <a href="https://github.com/JPisani4/todo-app" target="_blank"><i class="fab fa-github fa-xs"></i></a>
+                    </h3>
+                    <hr id="todohr">
+    		        <div>This is a simple todo list that persists through browser refreshes and exits.</div>
+    		        <div id="tech">It was developed with Node.js, Mongoose, and Express.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h3 class="title contactTitle">Contact Me</h3>
+    <hr id="contacthr">
+    <span class="contactTitle">Fill out this form or email me directly: <a href="mailto:jordanpisani4@gmail.com">jordanpisani4@gmail.com</a></span>
+    <p class="contactTitle">I'll respond as quickly as I can.</p>
+    <div id="contactForm">
+        <form action="?_method=PUT" method="POST">
+            <label for="email"><strong>Email address</strong></label>
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" required>
+            </div>
+            <label for="number"><strong>Phone number</strong> (optional)</label>
+            <div class="form-group">
+                <input class="form-control" type="text" name="number">
+            </div>
+            <label for="referral"><strong>How'd you find me?</strong> (optional)</label>
+            <div class="form-group">
+                <input class="form-control" type="text" name="referral">
+            </div>
+            <label for="message"><strong>What can I do for you?</strong></label>
+            <div class="form-group">
+                <textarea rows="8" class="form-control" type="text" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button id="submit" class="btn">Submit!</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    ScrollReveal().reveal('.knowledgeTitle', { delay: 500 });
+    ScrollReveal().reveal('hr', { delay: 500 });
+    ScrollReveal().reveal('.knowledge', { delay: 1000 });
+    
+    ScrollReveal().reveal('.examplesTitle', { delay: 500 });
+    ScrollReveal().reveal('.examples', { delay: 1000 });
+    
+    ScrollReveal().reveal('.contactTitle', { delay: 500 });
+    ScrollReveal().reveal('#contactForm', { delay: 1000 });
+</script>
+
+<% include partials/footer %>
