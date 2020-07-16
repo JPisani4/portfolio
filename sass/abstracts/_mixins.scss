@@ -1,0 +1,26 @@
+//media query manager
+@mixin respond($breakpoint) {
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 125em) {
+			@content; //2000px
+		}
+	}
+
+	@if $breakpoint == tab-land {
+		@media only screen and (min-width: 56.3125em) and (max-width: 75em) {
+			@content; //1200px
+		}
+	}
+
+	@if $breakpoint == tab-port {
+		@media only screen and (min-width: 37.5625em) and (max-width: 56.25em) {
+			@content; //900px
+		}
+	}
+
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) {
+			@content; //600px
+		}
+	}
+}

@@ -1,14 +1,66 @@
-        <div class="push"></div>
-        <!--</div>-->
-        <footer>
-                <p>
-                        © 2019 Jordan Pisani
-                </p>
-                <ul>
-                        <li><a href="https://www.linkedin.com/in/jordanpisani/" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
-                        <li><a href="https://github.com/JPisani4" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
-                        <li><a href="mailto:jordanpisani4@gmail.com">jordanpisani4@gmail.com</a></li>
-                </ul>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="https://github.com/JPisani4" class="footer__link">GitHub</a></li>
+                        <li class="footer__item"><a href="https://stackoverflow.com/users/9598729/jordan-pisani" class="footer__link">StackOverflow</a></li>
+                        <li class="footer__item"><a href="https://www.linkedin.com/in/jordanpisani" class="footer__link">LinkedIn</a></li>
+                    </ul>
+
+                    <div class="footer__copyright">&copy; 2020 Jordan Pisani. All rights reserved.</div>
+                </div>
+            </div>
         </footer>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous">
+        </script>
+
+        <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+
+        <script>
+            // Hide header on on scroll down
+            var didScroll;
+            var lastScrollTop = 0;
+            var delta = 5;
+            var navbarHeight = $('header').outerHeight();
+
+            $(window).scroll(function(event){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+                
+                // Make sure they scroll more than delta
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+                
+                // If they scrolled down and are past the navbar, add class .nav-up.
+                // This is necessary so you never see what is "behind" the navbar.
+                if (st > lastScrollTop && st > navbarHeight){
+                    // Scroll Down
+                    $('header').removeClass('nav-down').addClass('nav-up');
+                } else {
+                    // Scroll Up
+                    if(st + $(window).height() < $(document).height()) {
+                        $('header').removeClass('nav-up').addClass('nav-down');
+                    }
+                }
+                
+                lastScrollTop = st;
+            }
+        </script>
     </body>
 </html>

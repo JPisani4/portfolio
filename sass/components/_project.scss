@@ -1,0 +1,30 @@
+.project {
+	margin: 1rem;
+	background-color: $color-grey-light-1;
+	border-radius: 3px;
+	box-shadow: $shadow-light;
+	overflow: hidden;
+
+	&__img {
+		&--img {
+			height: 30rem;
+			width: auto;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1rem;
+
+		&--title {
+			// font-size: 1.8rem;
+		}
+		&--link {
+		}
+
+		& p {
+			font-size: 1.4rem;
+		}
+	}
+}

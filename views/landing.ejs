@@ -1,131 +1,153 @@
-<% include partials/header %>
+<%- include("partials/header") %>
 
 <section class="hero">
-	<div class="hero-content-area">
-		<h1>Hey there!</h1>
-		<h3>My name is <span>Jordan</span>. I'm a <span>web developer</span>.</h3>
-		<hr>
-		<p>
-		    I'm a <span>full-stack developer</span> with a focus on Node.js, Express, and Mongoose.
-		</p>
-		<p>
-		    I can take your <span>concept</span> and turn it into a <span>fully functional</span> and <span>feature complete</span> website.
-		</p>
-		<p id="padding">
-		    I'm currently looking for <span>freelancing</span> work.
-		</p>
-		<div class="scroll-down">
+	<div class="hero__text">
+		<h1 class="hero-primary">
+            <!-- <span class="hero-primary--main">Hey there!</span> -->
+            <span class="hero-primary--sub">My name is <span class="highlight">Jordan</span>. I'm a <span class="highlight">web developer</span>.</span>
+        </h1>
+
+		<p class="hero-secondary hero-secondary--1">
+		    I'm a <span class="highlight">full-stack developer</span> with a focus on Node, Express, and MongoDB.
+        </p>
+
+		<p class="hero-secondary hero-secondary--2">
+		    I can take your <span class="highlight">concept</span> and turn it into a <span class="highlight">fully functional</span> and <span class="highlight">feature complete</span> website.
+        </p>
+
+		<p class="hero-secondary hero-secondary--3">
+		    I'm currently looking for <span class="highlight">freelancing</span> work.
+        </p>
+
+		<!-- <div class="scroll-down">
             <div class="mouse">
                 <div class="scroller"></div>
             </div>
-        </div>
+        </div> -->
 	</div>
 </section>
 
-<section class="tech">
-    <div class="expertise">
-        <h3 class="title knowledgeTitle">Technical Expertise</h3>
-        <hr id="expertisehr">
-        <div class="knowledge">
-            <div><img src="./expertise/HTML5.png" width="60" height="60"><p>HTML 5</p></div>
-            <div><img src="./expertise/CSS3.png" width="60" height="60"><p>CSS 3</p></div>
-            <div><img src="./expertise/Javascript.png" width="60" height="60"><p>Javascript</p></div>
-            <div><img src="./expertise/React.png" width="58" height="52"><p>React</p></div>
-            <div><img src="./expertise/Bootstrap.png" width="60" height="60"><p>Bootstrap</p></div>
-            <div><img src="./expertise/Git.png" width="60" height="60"><p>Git</p></div>
-            <div><img src="./expertise/Heroku.png" width="60" height="60"><p>Heroku</p></div>
-            <div><img src="./expertise/Nodejs.png" width="100" height="61"><p></p></div>
-            <div><img src="./expertise/Express.png" width="120" height="31"><p></p></div>
-            <div><img src="./expertise/Mongodb.png" width="130" height="36"><p></p></div>
-        </div>
-    </div>
-    
-    <div id="projects" class="projects">
-    	<h3 class="title examplesTitle">Projects</h3>
-    	<hr id="projectshr">
-        <div class="examples">
-            <div class="text-center">
-                <div class="box">
-                    <img src="./projects/Warbler.png" class="rounded" alt="Warbler">
-                    <h3>
-                        Warbler
-                        <a href="https://warbler-client-jp.herokuapp.com" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a>
-                        <a href="https://github.com/JPisani4/warbler-server" target="_blank"><i class="fab fa-github fa-xs"></i></a>
-                    </h3>
-                    <hr id="warblerhr">
-    		        <div>Warbler is a Twitter clone with a fresh paint job developed for practice with React.</div>
-    		        <div id="tech">It was developed with Node.js, Mongoose, and React.</div>
-                </div>
+<main>
+    <section class="section-showcase" id="projects">
+        <div class="section-showcase__skills">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-2">Technical Expertise</h2>
             </div>
-            <div class="text-center">
-                <div class="box">
-                    <img src="./projects/Paypixs.png" class="rounded" alt="Paypixs">
-                    <h3>
-                        Paypixs
-                        <a href="https://www.paypixs.com" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a>
-                    </h3>
-                    <hr id="paypixshr">
-    		        <div>Paypixs is a service that offers payment in return for pictures of requested properties.</div>
-    		        <div id="tech">It was developed with Node.js, Mongoose, and Express.</div>
-                </div>
-            </div>
-            <div class="text-center">
-                <div class="box">
-                    <img src="./projects/TodoApp.png" class="rounded" alt="Todo List">
-                    <h3>
-                        Todo List
-                        <a href="https://todo-server-jp.herokuapp.com" target="_blank"><i class="fas fa-external-link-alt fa-xs"></i></a>
-                        <a href="https://github.com/JPisani4/todo-app" target="_blank"><i class="fab fa-github fa-xs"></i></a>
-                    </h3>
-                    <hr id="todohr">
-    		        <div>This is a simple todo list that persists through browser refreshes and exits.</div>
-    		        <div id="tech">It was developed with Node.js, Mongoose, and Express.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="contact" class="contact">
-    <h3 class="title contactTitle">Contact Me</h3>
-    <hr id="contacthr">
-    <span class="contactTitle">Fill out this form or email me directly: <a href="mailto:jordanpisani4@gmail.com">jordanpisani4@gmail.com</a></span>
-    <p class="contactTitle">I'll respond as quickly as I can.</p>
-    <div id="contactForm">
-        <form action="?_method=PUT" method="POST">
-            <label for="email"><strong>Email address</strong></label>
-            <div class="form-group">
-                <input class="form-control" type="email" name="email" required>
+            <div class="section-showcase__skills__content">
+                <div class="section-showcase__skills__content--img"><img src="./expertise/HTML5.png"><p>HTML 5</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/CSS3.png"><p>CSS 3</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/Javascript.png"><p>Javascript</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/React.png"><p>React</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/Bootstrap.png"><p>Bootstrap</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/Git.png"><p>Git</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/Heroku.png"><p>Heroku</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/Nodejs.png"><p>&nbsp;</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/Express.png"><p>&nbsp;</p></div>
+                <div class="section-showcase__skills__content--img"><img src="./expertise/Mongodb.png"><p>&nbsp;</p></div>
             </div>
-            <label for="number"><strong>Phone number</strong> (optional)</label>
-            <div class="form-group">
-                <input class="form-control" type="text" name="number">
+        </div>
+        
+        <div class="section-showcase__projects">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-2">Projects</h2>
             </div>
-            <label for="referral"><strong>How'd you find me?</strong> (optional)</label>
-            <div class="form-group">
-                <input class="form-control" type="text" name="referral">
+
+            <div class="section-showcase__projects__content">
+                <div class="project">
+                    <div class="project__img">
+                        <img src="./projects/Warbler.png" class="project__img--img" alt="Warbler">
+                    </div>
+
+                    <div class="project__text">
+                        <h3 class="heading-3">
+                            <span class="project__text--title">Warbler</span>
+
+                            <a class="project__text--link" href="https://warbler-client-jp.herokuapp.com">Link</a>
+                            
+                            <a class="project__text--link" href="https://github.com/JPisani4/warbler-server">Source Code</a>
+                        </h3>
+
+                        <p>Warbler is a Twitter clone with a fresh paint job developed for practice with React.</p>
+
+                        <p>It was developed with Node.js, Mongoose, and React.</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project__img">
+                        <img src="./projects/Paypixs.png" class="project__img--img" alt="PayPixs">
+                    </div>
+
+                    <div class="project__text">
+                        <h3 class="heading-3">
+                            <span class="project__text--title">PayPixs</span>
+
+                            <a class="project__text--link" href="https://www.paypixs.com">Link</a>
+                        </h3>
+
+                        <p>PayPixs is a service that offers payment in return for pictures of requested properties.</p>
+                        
+                        <p>It was developed with Node.js, Mongoose, and Express.</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project__img">
+                        <img src="./projects/TodoApp.png" class="project__img--img" alt="Todo List">
+                    </div>
+
+                    <div class="project__text">
+                        <h3 class="heading-3">
+                            <span class="project__text--title">Todo List</span>
+
+                            <a class="project__text--link" href="https://todo-server-jp.herokuapp.com">Link</a>
+                            
+                            <a class="project__text--link" href="https://github.com/JPisani4/todo-app">Source Code</a>
+                        </h3>
+
+                        <p>This is a simple todo list that persists through browser refreshes and exits.</p>
+                        
+                        <p>It was developed with Node.js, Mongoose, and Express.</p>
+                    </div>
+                </div>
             </div>
-            <label for="message"><strong>What can I do for you?</strong></label>
-            <div class="form-group">
-                <textarea rows="8" class="form-control" type="text" name="message" required></textarea>
+        </div>
+    </section>
+
+    <section class="section-contact" id="contact">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-2">Contact Me</h2>
+        </div>
+
+        <form action="?_method=PUT" method="POST" class="section-contact__form">
+            <div class="section-contact__form-group">
+                <input class="section-contact__form-group--input" type="email" name="email" minlength="1" maxlength="50" required>
+                <label class="section-contact__form--label" for="email"><strong>Email address</strong></label>
             </div>
-            <div class="form-group">
-                <button id="submit" class="btn">Submit!</button>
+
+            <div class="section-contact__form-group">
+                <input class="section-contact__form-group--input" type="text" name="number" minlength="16" maxlength="16">
+                <label class="section-contact__form--label" for="number"><strong>Phone number</strong> (optional)</label>
+            </div>
+
+            <div class="section-contact__form-group">
+                <input class="section-contact__form-group--input" type="text" name="referral" minlength="0" maxlength="100">
+                <label class="section-contact__form--label" for="referral"><strong>How'd you find me?</strong> (optional)</label>
+            </div>
+
+            <div class="section-contact__form-group">
+                <textarea rows="8" class="section-contact__form-group--input" type="text" name="message" minlength="1" maxlength="1000" required></textarea>
+                <label class="section-contact__form--label" for="message"><strong>What can I do for you?</strong></label>
+            </div>
+
+            <input class="inputField" type="text" name="information" autocomplete="off" tabindex="-1">
+
+            <div class="section-contact__form-group section-contact__form-group--btn">
+                <button class="btn btn--blue">Send!</button>
             </div>
         </form>
-    </div>
-</section>
+    </section>
+</main>
 
-<script>
-    ScrollReveal().reveal('.knowledgeTitle', { delay: 500 });
-    ScrollReveal().reveal('hr', { delay: 500 });
-    ScrollReveal().reveal('.knowledge', { delay: 1000 });
-    
-    ScrollReveal().reveal('.examplesTitle', { delay: 500 });
-    ScrollReveal().reveal('.examples', { delay: 1000 });
-    
-    ScrollReveal().reveal('.contactTitle', { delay: 500 });
-    ScrollReveal().reveal('#contactForm', { delay: 1000 });
-</script>
-
-<% include partials/footer %>
+<%- include("partials/footer") %>
