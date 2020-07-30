@@ -1,13 +1,10 @@
 //requiring dependencies
-// require('newrelic');
+require('newrelic');
 require('dotenv').config();
 const compression = require('compression'),
 	express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
-	// flash = require('connect-flash'),
-	// session = require('express-session'),
-	// cookieParser = require('cookie-parser'),
 	methodOverride = require('method-override'),
 	mailgun = require('mailgun-js')({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN }),
 	helmet = require('helmet');
@@ -29,23 +26,6 @@ app.use(methodOverride('_method'));
 //allows shorthand for css & assets
 app.use(express.static('css'));
 app.use(express.static('img'));
-
-//uses success/failure flashes
-// app.use(flash());
-
-//session config
-// app.use(function() {
-// 	app.use(express.cookieParser(process.env.COOKIE_SECRET));
-// 	app.use(express.session({ cookie: { maxAge: 60000 } }));
-// 	app.use(flash());
-// });
-
-//allows shorthand for flashes
-// app.use(function(req, res, next) {
-// 	res.locals.error = req.flash('error');
-// 	res.locals.success = req.flash('success');
-// 	next();
-// });
 
 app.get('/', function(req, res) {
 	res.render('landing');

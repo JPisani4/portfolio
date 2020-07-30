@@ -53,20 +53,6 @@ body {
   background-color: #22007c;
   color: #fff; }
 
-.hero-primary {
-  text-align: center; }
-  .hero-primary--main {
-    display: block;
-    font-size: 5rem;
-    font-weight: 400;
-    letter-spacing: .3rem; }
-  .hero-primary--sub {
-    display: block;
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: .3rem;
-    margin-bottom: 5rem; }
-
 .hero-secondary {
   font-size: 2rem;
   font-weight: 400;
@@ -75,6 +61,13 @@ body {
 
 .highlight {
   color: #22007c; }
+
+.heading-1 {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: .3rem;
+  margin-bottom: 2rem; }
 
 .heading-2 {
   font-size: 3.5rem;

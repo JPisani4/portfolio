@@ -1,21 +1,3 @@
-.hero-primary {
-	text-align: center;
-
-	&--main {
-		display: block;
-		font-size: 5rem;
-		font-weight: 400;
-		letter-spacing: .3rem;
-	}
-	&--sub {
-		display: block;
-		font-size: 3.5rem;
-		font-weight: 400;
-		letter-spacing: .3rem;
-		margin-bottom: 5rem;
-	}
-}
-
 .hero-secondary {
 	font-size: 2rem;
 	font-weight: 400;
@@ -25,6 +7,14 @@
 
 .highlight {
 	color: $color-primary;
+}
+
+.heading-1 {
+	display: block;
+	font-size: 3.5rem;
+	font-weight: 400;
+	letter-spacing: .3rem;
+	margin-bottom: 2rem;
 }
 
 .heading-2 {
