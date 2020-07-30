@@ -5,3 +5,4 @@ style.concat.css
 style.prefix.css
 newrelic_agent.log
 .snyk
+newrelic.js
