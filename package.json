@@ -28,7 +28,7 @@
 		"mailgun-js": "^0.22.0",
 		"method-override": "^3.0.0",
 		"newrelic": "^6.11.0",
-		"snyk": "^1.369.1"
+		"snyk": "^1.369.2"
 	},
 	"devDependencies": {
 		"autoprefixer": "^9.8.5",

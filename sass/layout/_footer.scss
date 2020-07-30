@@ -39,10 +39,6 @@
 
 		&--github {
 			@include footersvg;
-
-			&:hover {
-				fill: $color-white;
-			}
 		}
 
 		&--linkedin {

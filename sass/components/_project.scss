@@ -1,5 +1,5 @@
 .project {
-	margin: .75rem;
+	margin: 1rem;
 	border-radius: 3px;
 	box-shadow: $shadow-light;
 	overflow: hidden;
@@ -33,6 +33,8 @@
 		}
 
 		&--link {
+			display: flex;
+
 			&,
 			&:link,
 			&:visited {

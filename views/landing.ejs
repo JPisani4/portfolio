@@ -124,7 +124,7 @@
                             </a>
                         </div>
 
-                        <p class="project__text--info">PayPixs is a service that offers payment in return for pictures of requested properties.</p>
+                        <p class="project__text--info">PayPixs is a fully functional web app built for a real estate company.</p>
 
                         <p class="project__text--info">Developed with Node, Mongoose, and Express.</p>
                     </div>
@@ -150,9 +150,9 @@
                             </a>
                         </div>
 
-                        <p class="project__text--info">Nexter is a real estate website mockup.</p>
+                        <p class="project__text--info">Nexter is a demo site for a fake real estate company.</p>
                         
-                        <p class="project__text--info">Made with CSS Grid, Flexbox, and SASS.</p>
+                        <p class="project__text--info">Made with CSS Grid, Flexbox, and Sass.</p>
                     </div>
                 </div>
 
@@ -178,9 +178,9 @@
                             </a>
                         </div>
 
-                        <p class="project__text--info">Trillo is a travel booking website mockup.</p>
+                        <p class="project__text--info">Trillo is a demo site for a fake travel booking company.</p>
                         
-                        <p class="project__text--info">Made with Flexbox and SASS.</p>
+                        <p class="project__text--info">Made with Flexbox and Sass.</p>
                     </div>
                 </div>
 
@@ -221,7 +221,7 @@
             </div>
 
             <div class="form-group">
-                <input class="form-group--input" type="text" name="number" minlength="16" maxlength="16">
+                <input class="form-group--input" type="text" name="number" id="phoneNumber" minlength="0" maxlength="16">
                 <label class="form-group--label" for="number"><strong>Phone number</strong> (optional)</label>
             </div>
 
@@ -243,5 +243,52 @@
         </form>
     </section>
 </main>
+
+<script>
+	const isNumericInput = (event) => {
+    const key = event.keyCode;
+    return ((key >= 48 && key <= 57) || // Allow number line
+        (key >= 96 && key <= 105) // Allow number pad
+    );
+};
+
+const isModifierKey = (event) => {
+    const key = event.keyCode;
+    return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
+        (key === 8 || key === 9 || key === 13 || key === 46) || // Allow Backspace, Tab, Enter, Delete
+        (key > 36 && key < 41) || // Allow left, up, right, down
+        (
+            // Allow Ctrl/Command + A,C,V,X,Z
+            (event.ctrlKey === true || event.metaKey === true) &&
+            (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
+        )
+};
+
+const enforceFormat = (event) => {
+    // Input must be of a valid number format or a modifier key, and not longer than ten digits
+    if(!isNumericInput(event) && !isModifierKey(event)){
+        event.preventDefault();
+    }
+};
+
+const formatToPhone = (event) => {
+    if(isModifierKey(event)) {return;}
+
+    // I am lazy and don't like to type things more than once
+    const target = event.target;
+    const input = target.value.replace(/\D/g,'').substring(0,10); // First ten digits of input only
+    const zip = input.substring(0,3);
+    const middle = input.substring(3,6);
+    const last = input.substring(6,10);
+
+    if(input.length > 6){target.value = `(${zip}) ${middle} - ${last}`;}
+    else if(input.length > 3){target.value = `(${zip}) ${middle}`;}
+    else if(input.length > 0){target.value = `(${zip}`;}
+};
+
+const inputElement = document.getElementById('phoneNumber');
+inputElement.addEventListener('keydown',enforceFormat);
+inputElement.addEventListener('keyup',formatToPhone);
+</script>
 
 <%- include("partials/footer") %>

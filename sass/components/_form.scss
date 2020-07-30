@@ -24,6 +24,7 @@
 			border-bottom: 3px solid transparent;
 			display: block;
 			transition: all .2s;
+			box-shadow: $shadow-very-light;
 
 			&:focus {
 				outline: none;
@@ -58,5 +59,17 @@
 			margin-bottom: 1.5rem;
 			margin-top: 4rem;
 		}
+	}
+
+	@include respond(tab-land) {
+		min-width: 35vw;
+	}
+
+	@include respond(tab-port) {
+		min-width: 40vw;
+	}
+
+	@include respond(phone) {
+		min-width: 50vw;
 	}
 }
