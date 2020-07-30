@@ -60,6 +60,7 @@ app.put('/', function(req, res) {
 			if (error) {
 				return res.redirect('/');
 			}
+
 			return res.redirect('/');
 		});
 	}
