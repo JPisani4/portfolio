@@ -1,3 +1,14 @@
+@mixin footersvg {
+	width: 3rem;
+	height: 3rem;
+	transition: .2s all;
+	filter: brightness(0%);
+
+	&:hover {
+		filter: brightness(100%);
+	}
+}
+
 //media query manager
 @mixin respond($breakpoint) {
 	@if $breakpoint == big-desktop {

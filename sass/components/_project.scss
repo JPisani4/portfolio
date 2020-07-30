@@ -1,30 +1,89 @@
 .project {
-	margin: 1rem;
-	background-color: $color-grey-light-1;
+	margin: .75rem;
 	border-radius: 3px;
 	box-shadow: $shadow-light;
 	overflow: hidden;
+	position: relative;
+	display: flex;
 
 	&__img {
-		&--img {
-			height: 30rem;
-			width: auto;
-		}
+		height: 30rem;
+		width: auto;
+		transition: all .2s;
 	}
 
 	&__text {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		visibility: hidden;
+		opacity: 0;
 		display: flex;
+		align-items: center;
+		justify-content: center;
 		flex-direction: column;
-		margin-bottom: 1rem;
+		transition: opacity .2s, visibility .2s;
+		color: $color-white;
+		font-size: 2rem;
 
-		&--title {
-			// font-size: 1.8rem;
+		&--info {
+			font-size: 3rem;
 		}
+
 		&--link {
+			&,
+			&:link,
+			&:visited {
+				text-decoration: none;
+				transition: all .2s;
+				border: none;
+				cursor: pointer;
+			}
+
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+		}
+
+		&--svg {
+			width: 2.25rem;
+			height: 2.25rem;
+			fill: $color-white;
 		}
 
 		& p {
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 		}
+
+		&--info {
+			transition: all .2s;
+			transform: translateY(1rem);
+			text-align: center;
+			width: 90%;
+
+			&:last-child {
+				margin-top: 1rem;
+			}
+		}
+
+		&__links {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+
+	&:hover &__text {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&:hover &__img {
+		filter: blur(.2rem) grayscale(30%) brightness(70%);
+	}
+
+	&:hover &__text--info &__text--link {
+		transform: translateY(0);
 	}
 }
