@@ -7,15 +7,8 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: fixed;
-	top: 0;
 	transition: top 0.2s ease-in-out;
 	width: 100%;
-	z-index: 2;
-}
-
-.nav-up {
-	top: -7rem;
 }
 
 .user-nav {
@@ -47,6 +40,18 @@ header {
 		&:visited {
 			color: $color-white;
 			text-decoration: none;
+		}
+
+		@include respond(tab-land) {
+			font-size: 1.7rem;
+		}
+
+		@include respond(tab-port) {
+			font-size: 2rem;
+		}
+
+		@include respond(phone) {
+			font-size: 2.25rem;
 		}
 	}
 

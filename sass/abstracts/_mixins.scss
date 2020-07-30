@@ -1,11 +1,26 @@
 @mixin footersvg {
-	width: 2.75rem;
-	height: 2.75rem;
+	width: 3rem;
+	height: 3rem;
 	transition: .2s all;
 	filter: brightness(0%) invert(100%);
 
 	&:hover {
 		filter: brightness(100%) invert(0%);
+	}
+
+	@include respond(tab-land) {
+		width: 3.5rem;
+		height: 3.5rem;
+	}
+
+	@include respond(tab-port) {
+		width: 4rem;
+		height: 4rem;
+	}
+
+	@include respond(phone) {
+		width: 4.25rem;
+		height: 4.25rem;
 	}
 }
 

@@ -7,7 +7,7 @@
 	display: flex;
 
 	&__img {
-		height: 30rem;
+		max-height: 30rem;
 		width: auto;
 		transition: all .2s;
 	}
@@ -53,6 +53,21 @@
 			width: 2.25rem;
 			height: 2.25rem;
 			fill: $color-white;
+
+			@include respond(tab-land) {
+				width: 2.75rem;
+				height: 2.75rem;
+			}
+
+			@include respond(tab-port) {
+				width: 3rem;
+				height: 3rem;
+			}
+
+			@include respond(phone) {
+				width: 3.5rem;
+				height: 3.5rem;
+			}
 		}
 
 		& p {
@@ -72,6 +87,7 @@
 
 		&__links {
 			display: flex;
+			justify-content: center;
 			flex-direction: row;
 		}
 	}
@@ -82,10 +98,42 @@
 	}
 
 	&:hover &__img {
-		filter: blur(.2rem) grayscale(30%) brightness(70%);
+		filter: blur(.2rem) grayscale(40%) brightness(60%);
 	}
 
 	&:hover &__text--info &__text--link {
 		transform: translateY(0);
+	}
+
+	@media only screen and (hover: none) {
+		&__text {
+			visibility: visible;
+			opacity: 1;
+			position: static;
+			background-color: $color-white;
+			padding-bottom: 2rem;
+
+			&--svg {
+				fill: $color-primary;
+			}
+
+			&--info {
+				color: $color-grey-dark-1;
+			}
+
+			&--link:first-child {
+				margin-left: 1rem;
+			}
+
+			&-box {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		& {
+			position: static;
+			flex-direction: column;
+		}
 	}
 }
