@@ -4,11 +4,11 @@
 	<div class="hero__text">
 		<h1 class="heading-1">My name is <span class="highlight">Jordan</span>. I'm a <span class="highlight">web developer</span>.</h1>
 
-		<p class="hero-secondary hero-secondary--1">
+		<p class="hero-secondary">
 		    I'm a <span class="highlight">full-stack developer</span> with a focus on Node, Express, and MongoDB.
         </p>
 
-		<p class="hero-secondary hero-secondary--2">
+		<p class="hero-secondary">
 		    I can take your <span class="highlight">concept</span> and turn it into a <span class="highlight">fully functional</span> and <span class="highlight">feature complete</span> website.
         </p>
     </div>
@@ -113,7 +113,7 @@
 
             <div class="section-showcase__projects__content">
                 <div class="project">
-                    <img src="./projects/paypixs.jpg" class="project__img" alt="PayPixs">
+                    <img src="./projects/paypixs.png" class="project__img" alt="PayPixs">
 
                     <div class="project__text">
                         <div class="project__text-box">
@@ -222,22 +222,22 @@
 
         <form action="?_method=PUT" method="POST" class="form">
             <div class="form-group">
-                <input class="form-group--input" type="email" name="email" minlength="1" maxlength="50" required>
+                <input class="form-group--input" type="email" name="email" id="email" minlength="1" maxlength="50" required>
                 <label class="form-group--label" for="email"><strong>Email address</strong></label>
             </div>
 
             <div class="form-group">
-                <input class="form-group--input" type="text" name="number" id="phoneNumber" minlength="0" maxlength="16">
+                <input class="form-group--input" type="text" name="number" id="number" id="phoneNumber" minlength="0" maxlength="16">
                 <label class="form-group--label" for="number"><strong>Phone number</strong> (optional)</label>
             </div>
 
             <div class="form-group">
-                <input class="form-group--input" type="text" name="referral" minlength="0" maxlength="100">
+                <input class="form-group--input" type="text" name="referral" id="referral" minlength="0" maxlength="100">
                 <label class="form-group--label" for="referral"><strong>How'd you find me?</strong> (optional)</label>
             </div>
 
             <div class="form-group">
-                <textarea rows="8" class="form-group--input" type="text" name="message" minlength="1" maxlength="1000" required></textarea>
+                <textarea rows="8" class="form-group--input" type="text" name="message" id="message" minlength="1" maxlength="1000" required></textarea>
                 <label class="form-group--label" for="message"><strong>What can I do for you?</strong></label>
             </div>
 

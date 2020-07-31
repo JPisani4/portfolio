@@ -38,13 +38,14 @@
 		}
 
 		&--label {
-			font-size: 1.2rem;
+			font-size: 1.5rem;
 			font-weight: 700;
 			margin-left: 4rem;
 			margin-top: .7rem;
 			display: block;
 			transition: all .2s;
 			width: 90%;
+			color: $color-grey-dark-2;
 		}
 
 		&--input:placeholder-shown + &--label {

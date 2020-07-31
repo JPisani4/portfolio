@@ -11,6 +11,7 @@ const compression = require('compression'),
 
 //uses helmet; makes app more secure
 app.use(helmet());
+app.use(helmet.referrerPolicy({ policy: 'same-origin' }));
 
 //uses compression; makes app more efficient
 app.use(compression());
