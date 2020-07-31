@@ -135,5 +135,9 @@
 			position: static;
 			flex-direction: column;
 		}
+
+		&:hover &__img {
+			filter: none;
+		}
 	}
 }
