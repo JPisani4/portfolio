@@ -10,7 +10,11 @@ const compression = require('compression'),
 	helmet = require('helmet');
 
 //uses helmet; makes app more secure
-app.use(helmet());
+app.use(
+	helmet({
+		contentSecurityPolicy: false
+	})
+);
 
 //uses compression; makes app more efficient
 app.use(compression());
