@@ -49,7 +49,7 @@ app.put('/', function(req, res) {
 				req.body.email +
 				'<br>' +
 				'<strong>Phone Number</strong>: ' +
-				(req.body.number || 'N/A') +
+				(req.body.phoneNumber || 'N/A') +
 				'<br>' +
 				'<strong>Referred By</strong>: ' +
 				(req.body.referral || 'N/A') +
