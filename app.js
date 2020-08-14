@@ -7,6 +7,8 @@ const compression = require('compression'),
 	bodyParser = require('body-parser'),
 	methodOverride = require('method-override'),
 	mailgun = require('mailgun-js')({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN }),
+	http = require('http'),
+	enforce = require('express-sslify'),
 	helmet = require('helmet');
 
 //uses helmet; makes app more secure
@@ -15,6 +17,13 @@ app.use(
 		contentSecurityPolicy: false
 	})
 );
+
+//if production environment, set these options
+if (app.get('env') === 'production') {
+	//tells server to trust first proxy ie. heroku
+	app.set('trust proxy', 1);
+	app.use(enforce.HTTPS({ trustProtoHeader: true, trustXForwardedHostHeader: true }));
+}
 
 //uses compression; makes app more efficient
 app.use(compression());
@@ -80,4 +89,4 @@ const port = process.env.PORT;
 const ip = '0.0.0.0' || '127.0.0.1';
 
 //starts the server
-app.listen(port, ip, function() {});
+http.createServer(app).listen(port, ip), function() {};
