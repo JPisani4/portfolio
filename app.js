@@ -1,5 +1,4 @@
 //requiring dependencies
-require('newrelic');
 require('dotenv').config();
 const compression = require('compression'),
 	express = require('express'),
