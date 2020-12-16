@@ -16,7 +16,7 @@ app.use(
 		contentSecurityPolicy: false
 	})
 );
-
+ 
 //if production environment, set these options
 if (app.get('env') === 'production') {
 	//tells server to trust first proxy ie. heroku
