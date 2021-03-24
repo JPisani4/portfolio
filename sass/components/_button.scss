@@ -1,33 +1,33 @@
 .btn {
-	&,
-	&:link,
-	&:visited {
-		text-transform: uppercase;
-		text-decoration: none;
-		padding: 1.5rem 3rem;
-		display: inline-block;
-		border-radius: 5rem;
-		transition: all .2s;
-		position: relative;
-		font-size: 2rem;
-		border: none;
-		cursor: pointer;
-	}
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    border-radius: 5rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+  }
 
-	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 1rem 2rem rgba($color-black, .2);
-	}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
 
-	&:active,
-	&:focus {
-		outline: none;
-		transform: translateY(-1px);
-		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
-	}
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
 
-	&--blue {
-		background-color: $color-primary;
-		color: $color-white;
-	}
+  &--blue {
+    background-color: $color-primary;
+    color: $color-white;
+  }
 }

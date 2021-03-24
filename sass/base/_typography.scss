@@ -1,35 +1,35 @@
 .hero-secondary {
-	font-size: 2rem;
-	font-weight: 400;
-	letter-spacing: .2rem;
-	line-height: 4rem;
-	color: $color-grey-dark-2;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  line-height: 4rem;
+  color: $color-grey-dark-2;
 }
 
 .highlight {
-	color: $color-primary;
+  color: $color-primary;
 }
 
 .heading-1 {
-	display: block;
-	font-size: 3.5rem;
-	font-weight: 400;
-	letter-spacing: .3rem;
-	margin-bottom: 2rem;
-	color: $color-grey-dark-2;
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  margin-bottom: 2rem;
+  color: $color-grey-dark-2;
 }
 
 .heading-2 {
-	font-size: 3.5rem;
-	text-transform: uppercase;
-	letter-spacing: .1rem;
-	color: $color-primary;
-	margin-top: 4rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: $color-primary;
+  margin-top: 4rem;
 }
 
 .heading-3 {
-	font-size: 2.75rem;
-	@media only screen and (hover: none) {
-		color: $color-primary;
-	}
+  font-size: 2.75rem;
+  @media only screen and (hover: none) {
+    color: $color-primary;
+  }
 }

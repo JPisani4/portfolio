@@ -1,75 +1,75 @@
 .form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 30vw;
 
-	&-group {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
+  &-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
-		&:not(:last-child) {
-			margin-bottom: .5rem;
-		}
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
 
-		&--input {
-			font-size: 1.5rem;
-			font-family: inherit;
-			color: inherit;
-			padding: 1.5rem 2rem;
-			border-radius: 2px;
-			background-color: rgba($color-grey-light-1, 1);
-			border: none;
-			border-bottom: 3px solid transparent;
-			display: block;
-			transition: all .2s;
-			box-shadow: $shadow-very-light;
+    &--input {
+      font-size: 1.5rem;
+      font-family: inherit;
+      color: inherit;
+      padding: 1.5rem 2rem;
+      border-radius: 2px;
+      background-color: rgba($color-grey-light-1, 1);
+      border: none;
+      border-bottom: 3px solid transparent;
+      display: block;
+      transition: all 0.2s;
+      box-shadow: $shadow-very-light;
 
-			&:focus {
-				outline: none;
-				box-shadow: $shadow-light;
-				border-bottom: 3px solid $color-primary;
-			}
+      &:focus {
+        outline: none;
+        box-shadow: $shadow-light;
+        border-bottom: 3px solid $color-primary;
+      }
 
-			&:focus:invalid {
-				border-bottom: 3px solid $color-red-light;
-			}
-		}
+      &:focus:invalid {
+        border-bottom: 3px solid $color-red-light;
+      }
+    }
 
-		&--label {
-			font-size: 1.5rem;
-			font-weight: 700;
-			margin: .7rem 0 .7rem 1rem;
-			display: block;
-			transition: all .2s;
-			width: 90%;
-			color: $color-grey-dark-2;
-		}
+    &--label {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0.7rem 0 0.7rem 1rem;
+      display: block;
+      transition: all 0.2s;
+      width: 90%;
+      color: $color-grey-dark-2;
+    }
 
-		&--input:placeholder-shown + &--label {
-			opacity: 0;
-			visibility: hidden;
-			transform: translateY(-4rem);
-		}
+    &--input:placeholder-shown + &--label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
 
-		&--btn {
-			text-align: center;
-			align-items: center;
-			margin-bottom: 1.5rem;
-			margin-top: 4rem;
-		}
-	}
+    &--btn {
+      text-align: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      margin-top: 4rem;
+    }
+  }
 
-	@include respond(tab-land) {
-		min-width: 35vw;
-	}
+  @include respond(tab-land) {
+    min-width: 35vw;
+  }
 
-	@include respond(tab-port) {
-		min-width: 45vw;
-	}
+  @include respond(tab-port) {
+    min-width: 45vw;
+  }
 
-	@include respond(phone) {
-		min-width: 55vw;
-	}
+  @include respond(phone) {
+    min-width: 55vw;
+  }
 }
