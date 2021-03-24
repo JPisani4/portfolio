@@ -5,7 +5,6 @@ style.comp.css
 style.concat.css
 style.prefix.css
 newrelic_agent.log
-.snyk
 logs
 *.log
 npm-debug.log*
