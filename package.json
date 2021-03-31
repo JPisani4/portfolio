@@ -33,7 +33,7 @@
     "helmet": "^4.4.1",
     "mailgun-js": "^0.22.0",
     "method-override": "^3.0.0",
-    "snyk": "^1.509.0"
+    "snyk": "^1.518.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
